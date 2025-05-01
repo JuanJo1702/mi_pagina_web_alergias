@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlergoHub</title>
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    /* HEADER TRANSPARENTE */
+    header {
+      background: transparent;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      width: 100px;  /* Ajusta el tamaño de la imagen */
+      height: auto;
+      margin-right: 10px;  /* Espacio entre la imagen y el texto */
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      background: transparent;
+    }
+
+    /* LOGO MÁS GRANDE */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #001A49;
+    }
+
+    /* MENÚ PRINCIPAL */
+    .menu {
+      list-style: none;
+      display: flex;
+      margin-left: auto;
+      gap: 1.8rem;
+    }
+    .menu li {
+      position: relative;
+    }
+    .menu a {
+      color: #001A49;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      font-size: 1.1rem;
+      transition: background .2s;
+    }
+    .menu li:hover > a {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    /* SUBMENÚ NIVEL 1 */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      background: white;
+      border: 1px solid #ddd;
+      display: none;
+      min-width: 180px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    .menu li:hover .submenu {
+      display: block;
+    }
+    .submenu li a {
+      padding: 8px 12px;
+      color: #001A49;
+      font-size: 1rem;
+    }
+    .submenu li:hover > a {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    /* SUBMENÚ NIVEL 2 */
+    .submenu li {
+      position: relative;
+    }
+    .subsubmenu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      list-style: none;
+      background: white;
+      border: 1px solid #ddd;
+      display: none;
+      min-width: 160px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 20;
+    }
+    .submenu li:hover .subsubmenu {
+      display: block;
+    }
+    .subsubmenu li a {
+      padding: 8px 12px;
+      color: #001A49;
+      font-size: 0.95rem;
+    }
+    .subsubmenu li:hover > a {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    /* CONTENIDO DE PRUEBA */
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Logo AlerGuía" class="logo-img">
+      </div>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+  
+        <!-- Alergias -->
+        <li>
+          <a href="#">Alergias</a>
+          <ul class="submenu">
+            <li>
+              <!-- Aquí el href apunta a pescado.html, pero seguimos teniendo hover -->
+              <a href="pescado.html">Pescado</a>
+              <ul class="subsubmenu">
+                <li><a href="pescado.html#introduccion">Introduccion</a></li>
+                <li><a href="pescado.html#advertencias">Características</a></li>
+                <li><a href="pescado.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="pescado.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="pescado.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="pescado.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <!-- Aquí el href apunta a pescado.html, pero seguimos teniendo hover -->
+              <a href="mariscos.html">Mariscos</a>
+              <ul class="subsubmenu">
+                <li><a href="mariscos.html#introduccion">Introduccion</a></li>
+                <li><a href="mariscos.html#advertencias">Características</a></li>
+                <li><a href="mariscos.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="mariscos.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="mariscos.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="mariscos.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="huevo.html">Huevo</a>
+              <ul class="subsubmenu">
+                <li><a href="huevo.html#introduccion">Introduccion</a></li>
+                <li><a href="huevo.html#advertencias">Características</a></li>
+                <li><a href="huevo.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="huevo.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="huevo.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="huevo.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="leche.html">Leche</a>
+              <ul class="subsubmenu">
+                <li><a href="leche.html#introduccion">Introduccion</a></li>
+                <li><a href="leche.html#advertencias">Características</a></li>
+                <li><a href="leche.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="leche.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="leche.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="leche.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="trigo.html">Trigo</a>
+              <ul class="subsubmenu">
+                <li><a href="trigo.html#introduccion">Introduccion</a></li>
+                <li><a href="trigo.html#advertencias">Características</a></li>
+                <li><a href="trigo.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="trigo.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="trigo.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="trigo.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sesamo.html">Sésamo</a>
+              <ul class="subsubmenu">
+                <li><a href="sesamo.html#introduccion">Introduccion</a></li>
+                <li><a href="sesamo.html#advertencias">Características</a></li>
+                <li><a href="sesamo.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="sesamo.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="sesamo.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="sesamo.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="soja.html">Soya</a>
+              <ul class="subsubmenu">
+                <li><a href="soja.html#introduccion">Introduccion</a></li>
+                <li><a href="soja.html#advertencias">Características</a></li>
+                <li><a href="soja.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="soja.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="soja.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="soja.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="manu.html">Maní</a>
+              <ul class="subsubmenu">
+                <li><a href="manu.html#introduccion">Introduccion</a></li>
+                <li><a href="manu.html#advertencias">Características</a></li>
+                <li><a href="manu.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="manu.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="manu.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="manu.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="manu.html">Nueces de arbol</a>
+              <ul class="subsubmenu">
+                <li><a href="nuecesarbol.html#introduccion">Introduccion</a></li>
+                <li><a href="nuecesarbol.html#advertencias">Características</a></li>
+                <li><a href="nuecesarbol.html#reemplazos">Signos y Sintomas</a></li>
+                <li><a href="nuecesarbol.html#pacientes">¿Qué hacer?</a></li>
+                <li><a href="nuecesarbol.html#sustitutos">¿Cómo sustituir el aporte nutricional?</a></li>
+                <li><a href="nuecesarbol.html#sustitutos">Opciones de receta </a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Información adicional</a>
+          <ul class="submenu">
+            <li><a href="anafilaxia.html">Anafilaxia</a></li>
+            <li>
+              <a href="productos.html">Alternativos de productos comerciales</a>
+              <ul class="subsubmenu">
+                <li><a href="productos.html">Leche</a></li>
+                <li><a href="alternativashuevo.html">Huevo</a></li>
+                <li><a href="alternativasgluten.html">Gluten</a></li>
+                <li><a href="directorio.html">Directorio de Proveedores</a></li>
+                <li><a href="alimentacion_complementaria.html">Alimentacion Complementaria</a></li>
+
+              </ul>
+            </li>
+            <li><a href="recomendaciones.html">Recomendaciones</a></li>
+            <li><a href="etiqueta.html">¿Cómo identificar alérgenos en una etiqueta nutricional?</a></li>
+          </ul>
+        </li>
+        
+
+        <!-- MENÚ Contacto con tercer nivel -->
+        <li>
+          <a href="#">Contacto</a>
+          <ul class="submenu">
+            <li>
+              <a href="#">Laura Catalina Cascante Mahecha </a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Laura Sofía Fonseca Caicedo</a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Isabela Ospina Arriaga</a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Manuela Romero Zapata</a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Jacobo Hurtado Palacio</a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Sofía Castrillón Castañeda</a>
+              <ul class="subsubmenu">
+                <li><a href="#">Correo</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section style="text-align: center; margin-bottom: 60px;">
+      <h1 style="font-size: 2.5rem; color: #001A49;">¿Qué son las alergias alimentarias?</h1>
+      <p style="font-size: 1.1rem; max-width: 700px; margin: 20px auto; color: #444;">
+        Las alergias alimentarias son respuestas anormales del sistema inmunológico a ciertos alimentos 
+        y pueden desencadenar desde síntomas leves hasta reacciones graves. 
+        En <strong>AlerGuía</strong> te ayudamos a entenderlas, identificarlas y vivir con ellas de forma segura.
+      </p>
+    </section>
+  
+    <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+      <div style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+        <img src="pensando.png" alt="Síntomas" width="60" />
+        <h3 style="margin-top: 15px; color: #001A49;">Síntomas</h3>
+        <p>Conoce las señales más comunes de una reacción alérgica: urticaria (ronchas en la piel), edema (hinchazón), disnea (dificultad para respirar) , entre otras.</p>
+      </div>
+  
+      <div style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+        <img src="hablando.png" alt="Prevención" width="60" />
+        <h3 style="margin-top: 15px; color: #001A49;">Prevención</h3>
+        <p>Aprende cómo evitar alérgenos, leer etiquetas correctamente y prevenir contaminaciones cruzadas.</p>
+      </div>
+  
+      <div style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+        <img src="saludando.png" alt="Sustitutos" width="60" />
+        <h3 style="margin-top: 15px; color: #001A49;">Sustitutos</h3>
+        <p>Explora alternativas seguras para reemplazar ingredientes como leche, huevo, pescado, nueces y más.</p>
+      </div>
+  
+      <div style="background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+        <img src="comiendo.png" alt="Recetas" width="60" />
+        <h3 style="margin-top: 15px; color: #001A49;">Recetas Seguras</h3>
+        <p>Deliciosas preparaciones libres de alérgenos para que puedas disfrutar sin riesgos.</p>
+      </div>
+    </section>
+  </main>
+  
+  <style>
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+  
+    .card {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+  
+    .card:hover {
+      transform: scale(1.02);
+    }
+  
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    .card:hover::before {
+      opacity: 1;
+    }
+  
+    .card-content {
+      position: absolute;
+      inset: 0;
+      color: white;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+  
+    .card:hover .card-content {
+      opacity: 1;
+    }
+  
+    .card-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+  
+    .card-content p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  </style>
+
+</body>
+</html>
+

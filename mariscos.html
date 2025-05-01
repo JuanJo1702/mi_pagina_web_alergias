@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlerGuia – Mariscos</title>
+  <style>
+    /* ---- Reset y básicos ---- */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body { background:#f4f4f4; color:#333; }
+
+    /* ---- Header y nav interno ---- */
+    header { background:transparent; }
+    nav { max-width:1000px; margin:20px auto; display:flex; gap:1.5rem; }
+    nav a {
+      text-decoration:none;
+      padding:8px 12px;
+      color:#001A49;
+      font-size:1rem;
+      transition:background .2s;
+    }
+    nav a:hover { background:rgba(0,0,0,0.05); }
+
+    /* ---- Secciones ---- */
+    main { max-width:800px; margin:20px auto; padding:0 20px; }
+    section { margin-bottom:60px; }
+    section h2 { margin-bottom:10px; color:#001A49; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="mariscos.html#introduccion">Introduccion</a>
+      <a href="mariscos.html#causas">Causas</a>
+      <a href="mariscos.html#signos">Signos y Síntomas</a>
+      <a href="mariscos.html#que-hacer">¿Qué hacer?</a>
+      <a href="mariscos.html#sustitutos">Sustitutos</a>
+      <a href="mariscos.html#receta">Recetas</a>
+      <a href="mariscos.html#referencias">Referencias</a>
+      <a href="index.html" style="margin-left:auto;">← Volver</a>
+    </nav>
+  </header>
+
+  <main>
+<style>
+        /* === Estilo general del main === */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f9fdfc;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* === Títulos de sección === */
+main h2 {
+  font-size: 2rem;
+  color: #007B8F;
+  margin-bottom: 10px;
+  border-left: 6px solid #45c4b0;
+  padding-left: 12px;
+}
+
+/* === Párrafos === */
+main p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* === Listas implícitas (con viñetas manuales) === */
+main p::marker,
+main p br + • {
+  color: #45c4b0;
+  font-weight: bold;
+}
+
+/* === Secciones === */
+main section {
+  margin-bottom: 50px;
+  scroll-margin-top: 100px;
+}
+
+/* === Destacar nombres o alimentos === */
+main p strong,
+main p em {
+  color: #006D77;
+}
+
+/* === Enlace visual a secciones desde navegación si la hay === */
+main section:target {
+  background-color: #e9f7f5;
+  border-left: 5px solid #2a9d8f;
+  padding-left: 15px;
+  transition: background-color 0.4s ease;
+}
+/* CONTENEDOR GENERAL */
+.comment-section {
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  padding: 60px 20px;
+}
+
+/* CAJA DEL FORMULARIO */
+.comment-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  padding: 50px 40px;
+}
+
+/* TÍTULO */
+.comment-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* FORMULARIO */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CAMPOS */
+.comment-input,
+.comment-textarea {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #dcebea;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: #45c4b0;
+  box-shadow: 0 0 0 4px rgba(69, 196, 176, 0.15);
+  outline: none;
+}
+
+.comment-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* BOTÓN */
+.comment-button {
+  background-color: #007B8F;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.comment-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* FEEDBACK */
+.comment-feedback {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #28a745;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .comment-box {
+    padding: 30px 20px;
+  }
+
+  .comment-title {
+    font-size: 1.8rem;
+  }
+
+  .comment-input,
+  .comment-textarea {
+    font-size: 0.95rem;
+  }
+
+  .comment-button {
+    font-size: 0.95rem;
+  }
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+}
+
+.intro-image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.intro-image img {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.intro-text {
+  flex: 2 1 400px;
+  text-align: left;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  color: #005c75;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  font-weight: 500;
+  max-width: 700px;
+}
+
+.tiulopescadoprueba{
+    text-align: center;
+}
+.info-section {
+  background-color:#dcebea;
+  padding: 60px 40px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Header con título a la izquierda e imagen a la derecha */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.info-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  font-weight: 700;
+  border-left: 5px solid #45c4b0;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.info-icon {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Contenido */
+.info-content {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Lista en una sola columna */
+.fish-list {
+  list-style: disc inside;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.fish-list li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .info-title {
+    font-size: 1.8rem;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .info-icon {
+    width: 70px;
+  }
+
+  .info-content {
+    text-align: left;
+  }
+}
+/* Solo para la lista de pescados */
+.fish-list.two-columns {
+  columns: 2;
+  text-align: center;
+  column-gap: 40px;
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.fish-list.two-columns li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+/* En móvil, vuelve a una columna */
+@media (max-width: 768px) {
+  .fish-list.two-columns {
+    columns: 1;
+    
+  }
+}
+.que-hacer-container {
+  padding: 3rem 1.5rem;
+  background-color: #f4faff;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.que-hacer-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #007B8F;
+  font-weight: bold;
+}
+
+.que-hacer-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.que-hacer-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.que-hacer-list li {
+  margin-bottom: 0.5rem;
+}
+.custom-section {
+  background: linear-gradient(to right, #e8f9f8, #f4fcfc);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.custom-section-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.custom-section-icon img {
+  max-width: 150px;
+  height: auto;
+}
+
+.custom-section-text {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.custom-section-text h2 {
+  font-size: 1.6rem;
+  color: #00748d;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.highlight-bar {
+  display: inline-block;
+  width: 5px;
+  height: 24px;
+  background-color: #00a29b;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.custom-section-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.05rem;
+  }
+  .comment-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.comment-box h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+.textoabajocausa{
+text-align: center;
+}
+.comment-box {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+}
+
+</style>
+
+<section id="introduccion" class="intro-section">
+    <div class="intro-image">
+    <h2  class="tiulopescadoprueba">Alergia al Marisco</h2>
+      <img src="seafood.png" alt="Icono de pescado" />
+    </div>
+    <div class="intro-text">
+
+      <p>
+        A diferencia de la mayoría de las alergias alimentarias, la prevalencia de la alergia al marisco es mayor entre la población adulta que en la infantil.<br>
+
+        Comúnmente se confunde con alergia a los productos de mar, que incluye a mariscos y pescados, pero estos son diferentes desde el punto de vista biológico, por lo tanto, los pescados no provocarán reacciones alérgicas en aquellas personas que sean alérgicas a los mariscos, a menos que esa persona también sufre de alergia al pescado.<br>
+
+
+        La alergia a los crustáceos es uno de los tipos más comunes. Algunas personas son alérgicas a un solo tipo de mariscos, pero pueden comer otros, mientras que otras deben evitar todos los mariscos. <br>
+      </p>
+    </div>
+  </section>
+  
+  
+  <section id="causas" class="info-section">
+    <div class="info-header">
+      <h2 class="info-title">Características</h2>
+    </div>
+  
+    <div class="info-content">
+      <p>
+        En la categoría de mariscos, se  incluyen dos clasificaciones, cada uno con diferentes proteínas:
+      </p>
+      <ul class="fish-list two-columns">
+        <li>Los crustáceos, como los cangrejos de mar y de río, las langostas, los camarones, los langostinos, gambas, bogavante.</li>
+        <li>Los moluscos, como los calamares, el pulpo, los mejillones, los caracoles, las almejas, las ostras, los abulones y las vieiras</li>
+      </ul>
+      <p> La <strong> tropomiosina </strong> es el alérgeno mayoritario de la gamba y se ha identificado también como el alérgeno mayoritario de otros crustáceos, estando presente también en algunos moluscos (2).</p>
+    </div>
+  </section>
+  
+  <section id="signos" style="padding: 2rem;">
+    <h2 style="text-align: center;">Signos y Síntomas</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+      <!-- Columna Izquierda -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: imagen -->
+        <div style="flex: 1;">
+          <img src="chest-pain.png" alt="Síntomas alérgicos" style="width: 50%; height: auto; border-radius: 10px;  display: block; margin: 0 auto;">
+        </div>
+        <!-- Parte inferior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+            <p>
+                •	Edema (hinchazón) de los labios, la cara, la lengua y la garganta, o de otras partes del cuerpo.<br>
+                •	Sibilancia (problemas para respirar).<br>
+                •	Tos o atragantamiento, o sensación de opresión en la garganta.<br>
+                •	Dolor abdominal, diarrea, náuseas o vómitos.<br>
+                •	Mareos, aturdimiento o desmayo (2).
+          </p>
+        </div>
+      </div>
+  
+      <!-- Columna Derecha -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+
+          <p>
+            Los síntomas podrían aparecer entre unos minutos a una hora después de haber ingerido o tenido contacto o inhalación de los vapores de mariscos, y podría incluir: <br>
+            <br>
+            •	Urticaria (picazón e irritación en la piel.).<br>
+            •	Congestión nasal.<br>
+          </p>
+        </div>
+        <!-- Parte inferior: imagen -->
+        <div style="flex: 1;">
+          <img src="symptoms.png" alt="Reacción alérgica" style="width: 50%; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="que-hacer" class="que-hacer-container">
+    <h2 class="que-hacer-title">¿Qué Hacer?</h2>
+    <div class="que-hacer-box">
+      <p>
+        Cuando se haya confirmado la presencia de una alergia a los mariscos, se debe evitar el consumo de crustáceos y moluscos, pero también de alimentos que los contenga, para esto es importante leer las etiquetas, en el apartado de ingredientes y descartar cualquier tipo de tipo de marisco y de si hacen declaraciones en una posible contaminación cruzada en su procesamiento.<br>
+        <br>
+        Aunque es importante resaltar que los fabricantes no tienen la obligación de especificar que un alimento contiene mariscos del tipo de los moluscos en el listado de ingredientes, puesto a que los moluscos no pertenecen al grupo de los principales alérgenos alimentarios. Cuando en una etiqueta se especifica que el alimento contiene mariscos, se refieren exclusivamente a los crustáceos.<br>
+        <br>
+
+        Además de los mariscos, debe evitar el consumo de productos que lo contienen como la bullabesa, jibias en su tinta, consomé de pescado, glucosamina, saborizante de mariscos (extracto de cangrejo, almeja), surimi, entre otros (1).
+      </p>
+    </div>
+  </section>
+  
+
+  <section id="sustitutos" class="custom-section">
+    <div class="custom-section-content">
+      <div class="custom-section-icon">
+        <img src="substitution.png" alt="Icono relacionado">
+      </div>
+      <div class="custom-section-text">
+        <h2><span class="highlight-bar"></span>Sustitutos</h2>
+        <p>
+            Los mariscos destacan por su aporte de proteínas de alto valor biológico, ácidos grasos insaturados, y minerales  como el yodo, hierro, potasio, sodio, magnesio. Algunos alimentos que podría incluir para obtener estos nutrientes son:
+          <br><br>
+          • Huevos, pollo, carnes rojas, lácteos y derivados como fuente de proteína de alto valor biológico, similar a la que aportan los mariscos.
+          <br>
+          • Ácidos grasos poliinsaturados de tipo Omega 3 que pueden estar presentes en los mariscos, pueden obtenerse también a partir de semillas de chía y linaza, cáñamo y nueces como las almendras.<br>
+          <br>
+          • Sal yodada (no se recomienda el uso de la sal marina)<br>
+          <br>
+          • Las leguminosas como el frijol, lentejas, garbanzos, adicional a su aporte proteico, también son fuente de minerales como el magnesio, potasio y hierro.<br>
+          <br>
+          • El aguacate será un aporte de grasa monoinsaturadas, pero también de potasio y magnesio (3).<br>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .recetas-container {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .recetas-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .receta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .receta-card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      max-width: 500px;
+      flex: 1;
+      transition: transform 0.2s ease;
+    }
+  
+    .receta-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .receta-card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+  
+    .receta-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+  
+    @media (max-width: 768px) {
+      .receta-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  
+  <section id="receta"class="recetas-container">
+    <h2 class="recetas-title">Recetas para sustituir los mariscos</h2>
+    <div class="receta-grid">
+  
+      <div class="receta-card">
+        <h3>Mini pizzas de pollo en base de lentejas (1 porción)</h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          <br>
+          <strong>Para la base de pizza:</strong><br>
+          • 1 cucharón de lentejas previamente cocidas<br>
+          • 1 huevo<br>
+          • 1/4 taza de quinoa cocida<br>
+          • 1 cucharadita de orégano seco <br>
+          • Sal y pimienta al gusto<br>
+  
+          <strong>Para los toppings :</strong><br>
+          •	Salsa de tomate natural <br>
+          •	Queso mozzarella rallado <br>
+          •	Vegetales variados (pimiento, champiñones, maíz, etc.) <br>
+          •	Pollo desmechado cocido <br>
+          •	Aguacate en trozos <br>
+
+          <strong>Preparacion :</strong><br>
+          <br>
+          <strong>Prepara la base :</strong><br>
+
+          •	En un procesador de alimentos, mezcla la quinoa cocida, las lentejas cocidas , el huevo, el orégano, la sal y la pimienta. <br>
+          •	Con la masa formada, arma pequeñas bases de pizza sobre una bandeja para hornear cubierta con papel pergamino.<br>
+          •	Hornea las bases a 180°C durante 10-15 minutos, o hasta que estén ligeramente doradas.<br>
+
+          <strong>Añade los toppings :</strong><br>
+
+          •	Retira la base del horno y añade una capa de salsa de tomate sobre cada base y espolvorea queso mozzarella rallado. <br>
+          •	Coloca los vegetales cortados en julianas y el pollo desmechado.<br>
+          •	Hornea las mini pizzas durante 5-10 minutos más, o hasta que el queso se derrita.<br>
+          •	Añade trozos de aguacate fresco al terminar retirar del horno.<br>
+          •	Deja enfriar y disfruta.<br>
+        </p>
+      </div>
+  
+      <div class="receta-card">
+        <h3>Sándwich de pasta de garbanzo y aguacate (4 porciones)</h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          • 8 rebanadas de pan<br>
+          • 200g de garbanzos<br>
+          • 1 aguacate <br>
+          • Hojas de cilantro<br>
+          • 2 cucharadas de aceite de oliva<br>
+          • Sal y pimienta<br>
+          • Hojas verdes, rodajas de tomate y brotes de alfalfa<br>
+          <br>
+  
+          <strong>Preparación:</strong><br>
+
+          • Para preparar la pasta de garbanzos y aguacate, ponga en un bol los garbanzos, el aguacate y los machacamos con un tenedor. Añada el limón, la sal, la pimienta, el aceite de oliva y las hojitas de cilantro bien picadas y mezcla bien.<br>
+          • Monta los sándwiches poniendo primero una capa de la pasta, luego unas rodajas de tomate y unas hojas verdes y, por último, unos brotes de alfalfa (4).<br>
+        </p>
+      </div>
+  
+    </div>
+  </section>
+
+  <section id="referencias" class="custom-section">
+    <div class="custom-section-content">
+      <div class="custom-section-icon">
+        <img src="enlace.png" alt="Icono relacionado">
+      </div>
+      <div class="custom-section-text">
+        <h2><span class="highlight-bar"></span>Referencias</h2>
+        <p>
+          1. KidsHealth. Alergia a los mariscos [Internet]. KidsHealth; [sin fecha de publicación]. [citado 1 mayo 2025]. Disponible en: https://kidshealth.org/es/parents/shellfish-allergy.html <br>
+          <br>
+          2. Mayo Clinic. Alergia a los mariscos: síntomas, causas y tratamiento [Internet]. Mayo Clinic; [sin fecha de publicación]. [citado 2025 mayo 1]. Disponible en: https://www.mayoclinic.org/es/diseases-conditions/shellfish-allergy/symptoms-causes/syc-20377503<br>
+          <br>
+          3. Stanford Children's Health. Alergia a los mariscos: dieta para niños [Internet]. Stanford Children's Health; [sin fecha de publicación]. [citado 1 mayo 2025]. Disponible en: https://www.stanfordchildrens.org/es/topic/default?id=shellfish-allergy-diet-for-children-90-P04810<br>
+          <br>
+          4. SolNatural Bio. 3 ideas de sandwiches saludables y veganos [Internet]. SolNatural Bio; [citado 1 mayo 2025]. Disponible en: https://solnatural.bio/recipe/3-ideas-de-sandwiches-saludables-y-veganos<br>
+          <br><br>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+    <section class="comment-section">
+  <div class="comment-box">
+    <h2 class="comment-title">Déjanos tu comentario</h2>
+    <form id="commentForm" class="comment-form">
+      <input type="text" id="name" class="comment-input" placeholder="Tu nombre" required />
+      <input type="email" id="email" class="comment-input" placeholder="Tu correo electrónico" required />
+      <textarea id="message" class="comment-textarea" rows="5" placeholder="Escribe tu comentario..." required></textarea>
+      <button type="submit" class="comment-button">Enviar comentario</button>
+      <div id="feedback" class="comment-feedback"></div>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <!-- Incluye EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("8Afmme4zH6N8VJXpW"); // Tu public key
+
+  document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs.send("service_1g8n2su", "template_sy3f12c", {
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(
+      function () {
+        document.getElementById("feedback").innerHTML = '<p class="success-message">Comentario enviado con éxito.</p>';
+        document.getElementById("commentForm").reset();
+      },
+      function (error) {
+        document.getElementById("feedback").innerHTML = '<p class="error-message">Error al enviar: ' + error.text + '</p>';
+        console.error("Error:", error);
+      }
+    );
+  });
+</script>
+
+</body>
+</html>

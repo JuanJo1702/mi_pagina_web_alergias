@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlerGuia – Sesamo</title>
+  <style>
+    /* ---- Reset y básicos ---- */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body { background:#f4f4f4; color:#333; }
+
+    /* ---- Header y nav interno ---- */
+    header { background:transparent; }
+    nav { max-width:1000px; margin:20px auto; display:flex; gap:1.5rem; }
+    nav a {
+      text-decoration:none;
+      padding:8px 12px;
+      color:#001A49;
+      font-size:1rem;
+      transition:background .2s;
+    }
+    nav a:hover { background:rgba(0,0,0,0.05); }
+
+    /* ---- Secciones ---- */
+    main { max-width:800px; margin:20px auto; padding:0 20px; }
+    section { margin-bottom:60px; }
+    section h2 { margin-bottom:10px; color:#001A49; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="sesamo.html#introduccion">Introduccion</a>
+      <a href="sesamo.html#causas">Causas</a>
+      <a href="sesamo.html#signos">Signos y Síntomas</a>
+      <a href="sesamo.html#que-hacer">¿Qué hacer?</a>
+      <a href="sesamo.html#sustitutos">Sustitutos</a>
+      <a href="sesamo.html#receta">Recetas</a>
+      <a href="index.html" style="margin-left:auto;">← Volver</a>
+    </nav>
+  </header>
+
+  <main>
+<style>
+        /* === Estilo general del main === */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f9fdfc;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* === Títulos de sección === */
+main h2 {
+  font-size: 2rem;
+  color: #007B8F;
+  margin-bottom: 10px;
+  border-left: 6px solid #45c4b0;
+  padding-left: 12px;
+}
+
+/* === Párrafos === */
+main p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* === Listas implícitas (con viñetas manuales) === */
+main p::marker,
+main p br + • {
+  color: #45c4b0;
+  font-weight: bold;
+}
+
+/* === Secciones === */
+main section {
+  margin-bottom: 50px;
+  scroll-margin-top: 100px;
+}
+
+/* === Destacar nombres o alimentos === */
+main p strong,
+main p em {
+  color: #006D77;
+}
+
+/* === Enlace visual a secciones desde navegación si la hay === */
+main section:target {
+  background-color: #e9f7f5;
+  border-left: 5px solid #2a9d8f;
+  padding-left: 15px;
+  transition: background-color 0.4s ease;
+}
+/* CONTENEDOR GENERAL */
+.comment-section {
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  padding: 60px 20px;
+}
+
+/* CAJA DEL FORMULARIO */
+.comment-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  padding: 50px 40px;
+}
+
+/* TÍTULO */
+.comment-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* FORMULARIO */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CAMPOS */
+.comment-input,
+.comment-textarea {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #dcebea;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: #45c4b0;
+  box-shadow: 0 0 0 4px rgba(69, 196, 176, 0.15);
+  outline: none;
+}
+
+.comment-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* BOTÓN */
+.comment-button {
+  background-color: #007B8F;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.comment-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* FEEDBACK */
+.comment-feedback {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #28a745;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .comment-box {
+    padding: 30px 20px;
+  }
+
+  .comment-title {
+    font-size: 1.8rem;
+  }
+
+  .comment-input,
+  .comment-textarea {
+    font-size: 0.95rem;
+  }
+
+  .comment-button {
+    font-size: 0.95rem;
+  }
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+}
+
+.intro-image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.intro-image img {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.intro-text {
+  flex: 2 1 400px;
+  text-align: left;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  color: #005c75;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  font-weight: 500;
+  max-width: 700px;
+}
+
+.tiulopescadoprueba{
+    text-align: center;
+}
+.info-section {
+  background-color:#dcebea;
+  padding: 60px 40px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Header con título a la izquierda e imagen a la derecha */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.info-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  font-weight: 700;
+  border-left: 5px solid #45c4b0;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.info-icon {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Contenido */
+.info-content {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Lista en una sola columna */
+.fish-list {
+  list-style: disc inside;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.fish-list li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .info-title {
+    font-size: 1.8rem;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .info-icon {
+    width: 70px;
+  }
+
+  .info-content {
+    text-align: left;
+  }
+}
+/* Solo para la lista de pescados */
+.fish-list.two-columns {
+  columns: 2;
+  text-align: center;
+  column-gap: 40px;
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.fish-list.two-columns li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+/* En móvil, vuelve a una columna */
+@media (max-width: 768px) {
+  .fish-list.two-columns {
+    columns: 1;
+    
+  }
+}
+.que-hacer-container {
+  padding: 3rem 1.5rem;
+  background-color: #f4faff;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.que-hacer-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #007B8F;
+  font-weight: bold;
+}
+
+.que-hacer-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.que-hacer-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.que-hacer-list li {
+  margin-bottom: 0.5rem;
+}
+.custom-section {
+  background: linear-gradient(to right, #e8f9f8, #f4fcfc);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.custom-section-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.custom-section-icon img {
+  max-width: 150px;
+  height: auto;
+}
+
+.custom-section-text {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.custom-section-text h2 {
+  font-size: 1.6rem;
+  color: #00748d;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.highlight-bar {
+  display: inline-block;
+  width: 5px;
+  height: 24px;
+  background-color: #00a29b;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.custom-section-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.05rem;
+  }
+  .comment-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.comment-box h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+.textoabajocausa{
+text-align: center;
+}
+.comment-box {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+}
+
+</style>
+
+<section id="introduccion" class="intro-section">
+    <div class="intro-image">
+    <h2  class="tiulopescadoprueba">Alergia al Sesamo (Ajonjolí)</h2>
+      <img src="sesame.png" alt="Icono de pescado" />
+    </div>
+    <div class="intro-text">
+
+      <p>
+        La alergia al sésamo puede aparecer desde los primeros años de vida, especialmente con la introducción de panes, hummus y productos de respostería que contienen sésamo o su mismo aceite.  
+      </p>
+    </div>
+  </section>
+  
+  
+  <section id="causas" class="info-section">
+    <div class="info-header">
+      <h2 class="info-title">Características</h2>
+    </div>
+  
+    <div class="info-content">
+      <p>
+        La alergia al sésamo es una reacción inmunológica provocada por las proteínas presentes en las semillas de sésamo, <strong>la proteína Ses i 1 es el principal alergeno</strong>. 
+
+        La reacción alérgica puede presentarse tanto ante las semillas como ante productos derivados como el aceite de sésamo, la pasta tahini y productos horneados que contienen partículas, harina o trazas de sésamo. 
+      </p>
+    </div>
+  </section>
+  
+  <section id="signos" style="padding: 2rem;">
+    <h2 style="text-align: center;">Signos y Síntomas</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+      <!-- Columna Izquierda -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: imagen -->
+        <div style="flex: 1;">
+          <img src="chest-pain.png" alt="Síntomas alérgicos" style="width: 50%; height: auto; border-radius: 10px;  display: block; margin: 0 auto;">
+        </div>
+        <!-- Parte inferior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+          <p>
+            Síntomas más tardíos (hasta 2 horas después de la exposición):
+            <br><br>
+            • Dolor abdominal <br>
+            • Náuseas y vomito<br>
+            • Diarrea <br>
+          </p>
+        </div>
+      </div>
+  
+      <!-- Columna Derecha -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+          <p>
+            Los síntomas comunes son:
+            <br><br>
+            • Picor o inflamación en boca y garganta <br>
+            • Urticaria (ronchas) o erupciones <br>
+            • Rinitis y/o conjuntivitis <br>
+            • Dificultad respiratoria o crisis asmática<br>
+            • En casos severos: <a href="anafilaxia.html" target="_blank" class="tooltip-link">anafilaxia</a>
+          </p>
+          
+        </div>
+        <!-- Parte inferior: imagen -->
+        <div style="flex: 1;">
+          <img src="symptoms.png" alt="Reacción alérgica" style="width: 50%; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="que-hacer" class="que-hacer-container">
+    <h2 class="que-hacer-title">¿Qué Hacer?</h2>
+    <div class="que-hacer-box">
+      <p>
+        Una vez diagnosticada la alergia, evite estrictamente:
+      </p>
+      <p>
+        <li>Sésamo en todas sus presentaciones: semillas, harina, aceite, tahini.</li>
+        <li>Productos horneados: panes de hamburguesa, galletas o pastelería con sésamo o trazas</li>
+        <li>Comidas del Medio Oriente, asiáticas o veganas que usen tahini, hummus o aceites especiales.</li>
+      </p>
+      <p>
+        Ingredientes que podrían indicar presencia de sésamo:
+      </p>
+      <ul class="que-hacer-list">
+        <li>“Tahini”, “ajonjolí”, “pasta de sésamo”, “goma de sésamo”</li>
+        <li>Mezclas de especias</li>
+        <li>Salsas asiáticas o para sushi</li>
+        <li>Barras energéticas</li>
+        <li>Galletas multicereal</li>
+      </ul>
+    </div>
+  </section>
+  
+
+  <section id="sustitutos" class="custom-section">
+    <div class="custom-section-content">
+      <div class="custom-section-icon">
+        <img src="substitution.png" alt="Icono relacionado">
+      </div>
+      <div class="custom-section-text">
+        <h2><span class="highlight-bar"></span>Sustitutos</h2>
+        <p>
+          El sésamo es rico en grasas saludables (omega 6 y 9), proteínas vegetales, fósforo, hierro y calcio. Para evitar deficiencias:
+          <br><br>
+          • Proteínas: lentejas, garbanzos, tofu, pollo, carne magra.<br>
+          <br>
+          • Calcio: lácteos, brócoli, almendras, bebidas vegetales fortificadas.<br>
+          <br>
+          • Grasas saludables: aceite de oliva, aguacate, nueces y semillas no alergénicas como chía o linaza (verificar tolerancia individual).<br>
+          <br>
+          • Hierro: carnes rojas, lentejas, espinacas (mejorar absorción combinándolos con vitamina C)..<br>
+          <br>
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .recetas-container {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .recetas-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .receta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .receta-card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      max-width: 500px;
+      flex: 1;
+      transition: transform 0.2s ease;
+    }
+  
+    .receta-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .receta-card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+  
+    .receta-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+  
+    @media (max-width: 768px) {
+      .receta-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  
+  <section id="receta"class="recetas-container">
+    <h2 class="recetas-title">Recetas para sustituir el sesamo (ajonjolí)</h2>
+    <div class="receta-grid">
+  
+      <div class="receta-card">
+        <h3>Hummus sin tahini y sin sesamo (500g aproximadamente) </h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          • 1/2 taza de garbanzas cocinados<br>
+          • 1/2 pechuga de pollo cocida y desmenuzada<br>
+          • 1/2 taza de champiñones frescos salteados<br>
+          • 2 cucharadas de almendras tostadas<br>
+          • 1 puñado cilantro fresco picado<br>
+          • 1 cucharada de aceite de oliva<br>
+          • Jugo de 1/2 limón<br>
+          • 150 gr de yuca cocida<br>
+          • Aceite de girasol en aerosol<br>
+          • 2 cucharadas de queso mozzarella rallado<br>
+          • Harina al gusto (si es necesario)<br><br>
+  
+          <strong>Preparación:</strong><br>
+          <em>Mezcla de pollo:</em> En un tazón pequeño, mezcla el pollo desmenuzado, el aguacate macerado, el cilantro picado, los champiñones previamente salteados y las almendras tostadas y picadas..<br>
+          <br>
+          Adiciona jugo de limón, aceite de oliva, y sazonar con sal y pimienta al gusto. Mezcla todos los ingredientes.<br>
+          <br>
+          <em>Waffles:</em> En un tazón pequeño, macera la yuca cocida con ayuda de un tenedor e incorpora sal y el queso mozzarella rallado. La mezcla debe quedar con una textura pegajosa, en caso de estar muy líquida y difícil de manipular, se puede adicionar la harina de preferencia hasta obtener la textura deseada <br>
+          <br>
+          Vierta la mezcla sobre la wafflera ya caliente y previamente engrasada con el aceite de girasol,  y espera por 3 minutos hasta que se cocinen y tomen un color dorado.<br>
+          <br>
+          Finalmente, retira los waffles fuera de la máquina y sirva con la mezcla de pollo previamente preparada en la superficie.
+        </p>
+      </div>
+  
+      <div class="receta-card">
+        <h3>Hamburguesas de Garbanzo y Pollo (sin sesamo) (1 porción)</h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          • 1/2 taza de garbanzos cocidos<br>
+          • 1/2 de pechuga de pollo cocida y desmenuzada<br>
+          • 1 cucharada de cebolla rallada <br>
+          • 1 cucharada de zanahoria cocida y triturada<br>
+          • 1 cucharada de avena en hojuelas (sin trazas)<br>
+          • 1 huevo pequeño<br>
+          • 1 cucharada de aceite de oliva<br>
+          • Sal y pimienta al gusto<br>
+          • Opcional: Cúrcuma o comino (si no hay otras alergias)<br>
+          • Pan sin sésamo o lechuga parqa envolver<br>
+  
+          <strong>Preparación:</strong><br>
+          • Tritura los garbanzos hasta formar una pasta.<br>
+          • Mezcla con el pollo, avena, huevo, verduras, sal y especias.<br>
+          • Forma hamburguesas pequeñas con la mezcla. <br>
+          • Cocina en sartén antiadherente con un poco de aceite hasta que estén doradas por ambos lados<br>
+          • Sirve en pan sin sésamo o envueltas en hojas de lechuga con guarnición de verduras cocidas o arroz.<br>
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+    <section class="comment-section">
+  <div class="comment-box">
+    <h2 class="comment-title">Déjanos tu comentario</h2>
+    <form id="commentForm" class="comment-form">
+      <input type="text" id="name" class="comment-input" placeholder="Tu nombre" required />
+      <input type="email" id="email" class="comment-input" placeholder="Tu correo electrónico" required />
+      <textarea id="message" class="comment-textarea" rows="5" placeholder="Escribe tu comentario..." required></textarea>
+      <button type="submit" class="comment-button">Enviar comentario</button>
+      <div id="feedback" class="comment-feedback"></div>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <!-- Incluye EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("8Afmme4zH6N8VJXpW"); // Tu public key
+
+  document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs.send("service_1g8n2su", "template_sy3f12c", {
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(
+      function () {
+        document.getElementById("feedback").innerHTML = '<p class="success-message">Comentario enviado con éxito.</p>';
+        document.getElementById("commentForm").reset();
+      },
+      function (error) {
+        document.getElementById("feedback").innerHTML = '<p class="error-message">Error al enviar: ' + error.text + '</p>';
+        console.error("Error:", error);
+      }
+    );
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlerGuia – Leche </title>
+  <style>
+    /* ---- Reset y básicos ---- */
+    * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+    body { background:#f4f4f4; color:#333; }
+
+    /* ---- Header y nav interno ---- */
+    header { background:transparent; }
+    nav { max-width:1000px; margin:20px auto; display:flex; gap:1.5rem; }
+    nav a {
+      text-decoration:none;
+      padding:8px 12px;
+      color:#001A49;
+      font-size:1rem;
+      transition:background .2s;
+    }
+    nav a:hover { background:rgba(0,0,0,0.05); }
+
+    /* ---- Secciones ---- */
+    main { max-width:800px; margin:20px auto; padding:0 20px; }
+    section { margin-bottom:60px; }
+    section h2 { margin-bottom:10px; color:#001A49; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="leche.html#introduccion">Introduccion</a>
+      <a href="leche.html#causas">Causas</a>
+      <a href="leche.html#signos">Signos y Síntomas</a>
+      <a href="leche.html#que-hacer">¿Qué hacer?</a>
+      <a href="leche.html#sustitutos">Sustitutos</a>
+      <a href="leche.html#receta">Recetas</a>
+      <a href="index.html" style="margin-left:auto;">← Volver</a>
+    </nav>
+  </header>
+
+  <main>
+<style>
+        /* === Estilo general del main === */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #f9fdfc;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* === Títulos de sección === */
+main h2 {
+  font-size: 2rem;
+  color: #007B8F;
+  margin-bottom: 10px;
+  border-left: 6px solid #45c4b0;
+  padding-left: 12px;
+}
+
+/* === Párrafos === */
+main p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* === Listas implícitas (con viñetas manuales) === */
+main p::marker,
+main p br + • {
+  color: #45c4b0;
+  font-weight: bold;
+}
+
+/* === Secciones === */
+main section {
+  margin-bottom: 50px;
+  scroll-margin-top: 100px;
+}
+
+/* === Destacar nombres o alimentos === */
+main p strong,
+main p em {
+  color: #006D77;
+}
+
+/* === Enlace visual a secciones desde navegación si la hay === */
+main section:target {
+  background-color: #e9f7f5;
+  border-left: 5px solid #2a9d8f;
+  padding-left: 15px;
+  transition: background-color 0.4s ease;
+}
+/* CONTENEDOR GENERAL */
+.comment-section {
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  padding: 60px 20px;
+}
+
+/* CAJA DEL FORMULARIO */
+.comment-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  padding: 50px 40px;
+}
+
+/* TÍTULO */
+.comment-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* FORMULARIO */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CAMPOS */
+.comment-input,
+.comment-textarea {
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #dcebea;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.comment-input:focus,
+.comment-textarea:focus {
+  border-color: #45c4b0;
+  box-shadow: 0 0 0 4px rgba(69, 196, 176, 0.15);
+  outline: none;
+}
+
+.comment-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* BOTÓN */
+.comment-button {
+  background-color: #007B8F;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.comment-button:hover {
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* FEEDBACK */
+.comment-feedback {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #28a745;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .comment-box {
+    padding: 30px 20px;
+  }
+
+  .comment-title {
+    font-size: 1.8rem;
+  }
+
+  .comment-input,
+  .comment-textarea {
+    font-size: 0.95rem;
+  }
+
+  .comment-button {
+    font-size: 0.95rem;
+  }
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #e0f7f6, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+  flex-wrap: wrap; /* para que se adapte en pantallas pequeñas */
+}
+
+.intro-image {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.intro-image img {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+}
+
+.intro-text {
+  flex: 2 1 400px;
+  text-align: left;
+}
+
+.intro-text h2 {
+  font-size: 2.5rem;
+  color: #005c75;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  font-weight: 500;
+  max-width: 700px;
+}
+
+.tiulopescadoprueba{
+    text-align: center;
+}
+.info-section {
+  background-color:#dcebea;
+  padding: 60px 40px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Header con título a la izquierda e imagen a la derecha */
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.info-title {
+  font-size: 2.2rem;
+  color: #007B8F;
+  font-weight: 700;
+  border-left: 5px solid #45c4b0;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.info-icon {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Contenido */
+.info-content {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* Lista en una sola columna */
+.fish-list {
+  list-style: disc inside;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.fish-list li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .info-title {
+    font-size: 1.8rem;
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .info-icon {
+    width: 70px;
+  }
+
+  .info-content {
+    text-align: left;
+  }
+}
+/* Solo para la lista de pescados */
+.fish-list.two-columns {
+  columns: 2;
+  text-align: center;
+  column-gap: 40px;
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.fish-list.two-columns li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+/* En móvil, vuelve a una columna */
+@media (max-width: 768px) {
+  .fish-list.two-columns {
+    columns: 1;
+    
+  }
+}
+.que-hacer-container {
+  padding: 3rem 1.5rem;
+  background-color: #f4faff;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.que-hacer-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #007B8F;
+  font-weight: bold;
+}
+
+.que-hacer-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.que-hacer-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+.que-hacer-list li {
+  margin-bottom: 0.5rem;
+}
+.custom-section {
+  background: linear-gradient(to right, #e8f9f8, #f4fcfc);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.custom-section-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.custom-section-icon img {
+  max-width: 150px;
+  height: auto;
+}
+
+.custom-section-text {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.custom-section-text h2 {
+  font-size: 1.6rem;
+  color: #00748d;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.highlight-bar {
+  display: inline-block;
+  width: 5px;
+  height: 24px;
+  background-color: #00a29b;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.custom-section-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.tooltip-link {
+  color: #c0392b; /* rojo oscuro */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.tooltip-link:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.05rem;
+  }
+  .comment-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.comment-box h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+.textoabajocausa{
+text-align: center;
+}
+.comment-box {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+}
+
+</style>
+
+<section id="introduccion" class="intro-section">
+    <div class="intro-image">
+    <h2  class="tiulopescadoprueba">Alergia a la leche</h2>
+      <img src="milk.png" alt="Icono de pescado" />
+    </div>
+    <div class="intro-text">
+
+      <p>
+        La alergia la leche, es una de las más frecuentes en lactantes y niños pequeños.Es una de las alergias alimentarias más comunes en niños.
+      </p>
+    </div>
+  </section>
+  
+  
+  <section id="causas" class="info-section">
+    <div class="info-header">
+      <h2 class="info-title">Características</h2>
+    </div>
+  
+    <div class="info-content">
+      <p>
+        La causa de la alergia puede ser a la leche de oveja, leche de cabra, leche de búfala y de otros mamíferos. Sin embargo, la causa más común es a la leche de vaca, a la proteína B-lactoglobulina del suero y a la Alfa S1 caseina. 
+      </p>
+    </div>
+  </section>
+  
+  <section id="signos" style="padding: 2rem;">
+    <h2 style="text-align: center;">Signos y Síntomas</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+      <!-- Columna Izquierda -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: imagen -->
+        <div style="flex: 1;">
+          <img src="chest-pain.png" alt="Síntomas alérgicos" style="width: 50%; height: auto; border-radius: 10px;  display: block; margin: 0 auto;">
+        </div>
+        <!-- Parte inferior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+            <p>
+                Los síntomas que se manifiestan más tarde pueden ser: <br>
+                <br>
+                •	Heces blandas, diarrea o disentería (heces que pueden contener sangre)<br>
+                •	Espasmos esofágicos (calambres abdominales)<br>
+                •	Rinitis (secreciones nasales líquidas)<br>
+                •	Epífora (ojos llorosos)<br>
+                •	Llanto en bebés a causa de cólicos<br>
+              </p>
+              <p>
+                Diferencia con la intolerancia a la leche: En la intolerancia no interviene el sistema inmunológico, cambian los síntomas y también requiere un tratamiento diferente. 
+            </p>
+        </div>
+      </div>
+  
+      <!-- Columna Derecha -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Parte superior: texto -->
+        <div style="flex: 1; background-color: #f9f9f9; padding: 1rem; border-radius: 10px;">
+          <p>
+            Se manifiestan de unos minutos a unas pocas horas después de consumirla y varían entre cada persona. <br>
+            •	Ronchas <br>
+            •	Sibilancias<br>
+            •	Sensación de picazón u hormigueo alrededor de los labios o la boca<br>
+            •	Hinchazón de los labios, lengua o garganta<br>
+            •	Tos o dificultad para respirar<br>
+            •	Vómitos<br>
+        
+          </p>
+        </div>
+        <!-- Parte inferior: imagen -->
+        <div style="flex: 1;">
+          <img src="symptoms.png" alt="Reacción alérgica" style="width: 50%; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="que-hacer" class="que-hacer-container">
+    <h2 class="que-hacer-title">¿Qué Hacer?</h2>
+    <div class="que-hacer-box">
+      <p>
+        Luego de tener identificada la alergía es importante tener en cuenta estos alimentos, ya sea para prohibirlos o consumirlos con precaución<br>
+        <br>
+        
+        Alimentos prohibidos:<br> 
+        <br>
+        •	Albúmina<br>
+        •	Caseína (hidrolizada)<br>
+        •	Caseinato (cualquier forma)<br>
+        •	Crema del cuajo de la leche<br>
+        •	Crema agria<br>
+        •	Crema de leche<br>
+        •	Cuajada<br>
+        •	Ghee/mantequilla de vaca sin sal clarificada)<br>
+        •	Helado<br>
+        •	Lactulosa<br>
+        •	Lactoalbúmina, fosfato de lactoalbúmina.<br>
+        •	Lactoferrina<br>
+        •	Lactosa<br>
+        •	Leche acidificada.<br>
+        •	Leche chocolatada.<br>
+        •	Leche (en cualquier forma: condensada, derivados, seca, evaporada, leche de cabra) y de otros animales, baja en grasa, malteada, sin grasa en polvo entera,  desnatada.Mantequilla.<br>
+        •	Margarinas (leer las etiquetas con cuidado. Se puede consumir si es 100% vegetal sin trazas de suero de leche).<br>
+        •	Natilla.<br>
+        •	Pudines.<br>
+        •	Queso.<br>
+        •	Queso cottage.<br>
+        •	Saborizante artificial a mantequilla.<br>
+        •	Turrones.<br>
+        •	Whey (proteína de suero en cualquier forma).<br>
+        •	Yogur (congelado, suave, regular, frutas y barras a base de yogur).<br>
+        <br>
+        Alimentos que han de ser consumidos con precaución <br>
+        •	Albondigas preparadas <br>
+        •	Café<br>
+        •	Confites o caramelos <br>
+        •	Cultivos de ácido láctico (los que usan para yogur casero) <br>
+        •	Chocolate <br>
+        •	Carnes procesadas (lonchas de jamón, pollo o carne) <br>
+        •	Perros calientes <br>
+        •	Productos no lácteos (ejemplo: postres congelados) <br>
+        •	Productos cocidos al horno (pueden ser elaborados con mantequilla, productos lácteos, caseína, caseinato de sodio, o proteína whey) <br>
+        •	Saborizantes (naturales y artificiales) <br>
+        •	Salsas<br> 
+      </p>
+    </div>
+    <p> Habla con tu medico y ten claro si tu restriccion es total o parcial (en caso de que puedas consumir horneados).</p>
+  </section>
+  
+
+  <section id="sustitutos" class="custom-section">
+    <div class="custom-section-content">
+      <div class="custom-section-icon">
+        <img src="substitution.png" alt="Icono relacionado">
+      </div>
+      <div class="custom-section-text">
+        <h2><span class="highlight-bar"></span>Sustitutos</h2>
+        <p>
+            La leche y los productos lácteos proporcionan nutrientes importantes que incluyen proteínas, calcio, vitamina A, vitamina D, magnesio, fósforo, potasio, vitamina B2, vitamina B12, zinc, colina y selenio. <br>
+            El calcio, el potasio y la vitamina D son importantes principalmente porque no se consumen lo suficiente<br>
+            Las bebidas de soya fortificadas con calcio, vitamina A y vitamina D son similares a la leche en función de su composición de nutrientes y su uso en las comidas. Otras alternativas pueden ser bebidas de arroz, avena y almendras fortificadas.  
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .recetas-container {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    .recetas-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .receta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+  
+    .receta-card {
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      max-width: 500px;
+      flex: 1;
+      transition: transform 0.2s ease;
+    }
+  
+    .receta-card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .receta-card h3 {
+      margin-top: 0;
+      color: #222;
+    }
+  
+    .receta-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+  
+    @media (max-width: 768px) {
+      .receta-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  
+  <section id="receta"class="recetas-container">
+    <h2 class="recetas-title">Recetas para sustituir la leche</h2>
+    <div class="receta-grid">
+  
+      <div class="receta-card">
+        <h3>Helado (ingredientes para 4-6 porciones) </h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          • Almendras 1/2 libra<br>
+          • Agua: 1 Litro<br>
+          • Miel al gusto<br>
+          • Fruta: Mango, fresas, Arandanos, Banano<br>
+          • Clara de Huevo: 1 unidad<br>
+  
+          <strong>Preparación:</strong><br>
+          <em>Mezcla de pollo:</em> Remojar las almendrasen el agua y dejar por 2 o 3 horas.<br>
+          <br>
+          Licuar hasta obtener una mezcla homogénea.<br>
+          <br>
+          Pasar por un colador y prensar  <br>
+          <br>
+          Agregar la fruta y la clara de huevo<br>
+          <br>
+          Licuar de nuevo 
+          <br>
+          Agregar la miel si se requiere, ya que con algunas frutas bastará para obtener un sabor dulce. <br>
+          <br>
+          Servir en moldes individuales y llevar al congelador. 
+        </p>
+      </div>
+  
+      <div class="receta-card">
+        <h3>Pasteles de yuca (4 porciones) </h3>
+        <p>
+          <strong>Ingredientes:</strong><br>
+          • Puré de yuca: 1 taza (130g) <br>
+          • Harina de maíz: ½ taza (80g) <br>
+          • Agua suficiente para mojar la masa<br>
+          • Sal al gusto <br>
+          • Carne molida preparada: 6 cucharadas (90g) <br>
+          • Aceite suficiente para freír (48g)<br>
+  
+          <strong>Preparación:</strong><br>
+          <em>Mezcla:</em> Mezclar el puré de yuca con la harina de maíz, la sal y el agua si es necesario. 
+          <br>
+          Estirar la masa con la palma de la mano sobre un papel plástico y vigilar que no quede muy fina. <br>
+          <br>
+          Cortar círculos grandes con un cortardor, colocando una cucharada de guiso de carne en el centro y cubrirlos con otro disco de masa. Conviene cerrar bien los bordes para que no se despeguen al freír. .<br>
+          <br>
+          Freír en aceite caliente (en caso de tener la freidora de aire, es preferible usarla). 
+        </p>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section id="referencias" class="custom-section">
+    <div class="custom-section-content">
+      <div class="custom-section-icon">
+        <img src="enlace.png" alt="Icono relacionado">
+      </div>
+      <div class="custom-section-text">
+        <h2><span class="highlight-bar"></span>Referencias</h2>
+        <p>
+          1. Mayo Clinic. Alergia a la leche: síntomas, causas y tratamiento [Internet]. Mayo Clinic; [sin fecha de publicación]. [citado 1 mayo 2025]. Disponible en: https://www.mayoclinic.org/es/diseases-conditions/milk-allergy/symptoms-causes/syc-20375101<br>
+          <br>
+          2. U.S. Food and Drug Administration (FDA). La leche y las alternativas a base de plantas: conozca la diferencia de nutrientes [Internet]. FDA; [sin fecha de publicación]. [citado 1 mayo 2025]. Disponible en: https://www.fda.gov/consumers/articulos-para-el-consumidor-en-espanol/la-leche-y-las-alternativas-base-de-plantas-conozca-la-diferencia-de-nutrientes#:~:text=Alternativas%20de%20leche%20a%20base%20de%20plantas,-Aunque%20muchas%20alternativas&text=Las%20fuentes%20vegetales%20incluyen%3A,el%20pistacho%20y%20la%20nuez.<br>
+          <br>
+          3. Henao Roldan.C, Alergia Alimentaria: aspectos nutricionales prácticos,Segunda edición, Medellín: Universidad CES.Editorial Ces, 2020<br>
+          <br>
+        </p>
+      </div>
+    </div>
+  </section>
+    <section class="comment-section">
+  <div class="comment-box">
+    <h2 class="comment-title">Déjanos tu comentario</h2>
+    <form id="commentForm" class="comment-form">
+      <input type="text" id="name" class="comment-input" placeholder="Tu nombre" required />
+      <input type="email" id="email" class="comment-input" placeholder="Tu correo electrónico" required />
+      <textarea id="message" class="comment-textarea" rows="5" placeholder="Escribe tu comentario..." required></textarea>
+      <button type="submit" class="comment-button">Enviar comentario</button>
+      <div id="feedback" class="comment-feedback"></div>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <!-- Incluye EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("8Afmme4zH6N8VJXpW"); // Tu public key
+
+  document.getElementById("commentForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    emailjs.send("service_1g8n2su", "template_sy3f12c", {
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(
+      function () {
+        document.getElementById("feedback").innerHTML = '<p class="success-message">Comentario enviado con éxito.</p>';
+        document.getElementById("commentForm").reset();
+      },
+      function (error) {
+        document.getElementById("feedback").innerHTML = '<p class="error-message">Error al enviar: ' + error.text + '</p>';
+        console.error("Error:", error);
+      }
+    );
+  });
+</script>
+
+</body>
+</html>
